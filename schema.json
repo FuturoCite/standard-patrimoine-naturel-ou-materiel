@@ -321,16 +321,6 @@
 			"example": "70"
 		},
 		{
-			"name": "house_number",
-			"title": "Numéro de police le plus proche",
-			"type": "string",
-			"constraints": {
-				"required": false
-			},
-			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche du patrimoine",
-			"example": "70"
-		},
-		{
 			"name": "distance",
 			"title": "Distance au point d'adresse",
 			"type": "number",
