@@ -1,0 +1,482 @@
+{
+	"$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+	"title": "Patrimoine naturel ou matériel",
+	"description": "Spécification du standard du patrimoine naturel ou matériel",
+	"keywords": [
+		"patrimoine",
+		"nature",
+		"patrimoine naturel",
+		"patrimoine matériel"
+	],
+	"countryCode": "BE",
+	"licenses": [
+		{
+			"title": "Creative Commons",
+			"name": "CC-by 2.0 BE",
+			"path": "https://creativecommons.org/licenses/by/2.0/be/"
+		}
+	],
+	"resources": [
+		{
+			"title": "Fichier valide (CSV)",
+			"name": "exemple-valide-csv",
+			"path": "https://raw.githubusercontent.com/FuturoCite/standard-patrimoine-naturel-ou-materiel/main/exemple-valide.csv"
+		}
+	],
+	"author": "FuturoCité",
+	"contact": "https://www.futurocite.be/contact/demande-informations/",
+	"contributors": [
+		{
+			"organisation": "FuturoCité",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Datactivist",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Marche-en-Famenne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Idelux",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Liège",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Namur",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Walhain",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Bastogne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de La Louvière",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Tournai",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Service public de Wallonie",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Bureau Economique de la Province de Namur",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville d'Andenne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Chaudfontaine",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Hannut",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Intercommunale pour la Gestion et la Réalisation d'Etudes Techniques et Economiques",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Intercommunale de Développement Economique et d'Aménagement du coeur du Hainaut",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Mons",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Chimay",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Braine-L'Alleud",
+			"role": "contributor"
+		}
+	],
+	"version": "0.1.0",
+	"created": "2023-06-19",
+	"updated": "2023-06-19",
+	"homepage": "https://github.com/FuturoCite/standard-patrimoine-naturel-ou-materiel",
+	"uri": "https://raw.githubusercontent.com/FuturoCite/standard-patrimoine-naturel-ou-materiel/main/schema.json",
+	"fields": [
+		{
+			"name": "id",
+			"title": "Identifiant",
+			"type": "string",
+			"constraints": {
+				"required": true,
+				"unique": true
+			},
+			"description": "Ce champ contient un identifiant unique local. Le producteur de données le génère en associant le code INS de la commune dans laquelle se situe le patrimoine à un nombre. Ce champ permet d'éviter localement les doublons. Le code INS de la commune est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "92094-1177"
+		},
+		{
+			"name": "type",
+			"title": "Type de patrimoine",
+			"type": "string",
+			"constraints": {
+				"enum": [
+					"Petit patrimoine",
+					"Patrimoine naturel",
+					"Patrimoine architectural",
+					"Patrimoine artistique"
+				],
+				"required": true
+			},
+			"description": "Ce champ indique le type de patrimoine présent dans ce jeu. Les valeurs possibles sont : Petit patrimoine, Patrimoine naturel, Patrimoine architectural, Patrimoine artistique",
+			"example": "Petit patrimoine"
+		},
+		{
+			"name": "category",
+			"title": "Catégorie du patrimoine",
+			"type": "string",
+			"constraints": {
+				"enum": [
+					"Point d’eau",
+					"Petit patrimoine sacré",
+					"Ouvertures",
+					"Signalisation",
+					"Délimitation",
+					"Eclairage",
+					"Mesure du temps et de l’espace",
+					"Justice et libertés",
+					"Repos",
+					"Ornementation en fer",
+					"Patrimoine militaire et commémoratif",
+					"Arbre remarquable",
+					"Outil ancien",
+					"Art décoratif",
+					"Bien relatif à la faune, la flore ou aux minéraux",
+					"Transport",
+					"Atelier",
+					"Parc et jardin",
+					"Point d'eau (lac, étang, …)",
+					"Terril",
+					"Réserve naturelle et site d'intérêt biologique",
+					"Bois et forêt",
+					"Cours d'eau",
+					"Cascade",
+					"Arbre remarquable",
+					"Formation géologique",
+					"Vignoble",
+					"Autre",
+					"Ferme et grange",
+					"Château",
+					"Fortification",
+					"Moulin",
+					"Lieu de culte (Eglise, chapelle, abbaye, collégiale, …)",
+					"Fontaine et lavoir",
+					"Sculpture et statue",
+					"Beffroi et tour",
+					"Habitation",
+					"Hospice",
+					"Commerce et Horeca",
+					"Bâtiment industriel",
+					"Four, meule, pressoir",
+					"Cimetière",
+					"Monument commémoratif",
+					"Ecole",
+					"Bâtiment public",
+					"Château d'eau",
+					"Ouvrage d'art (pont, tunnel, écluse, …)",
+					"Gare",
+					"Site archéologique",
+					"Peinture, dessin, …",
+					"Outil",
+					"Sculpture",
+					"Objet d'art",
+					"Mobilier",
+					"Manuscrit, livre, …",
+					"Photographie",
+					"Gravure",
+					"Tapisserie"
+				],
+				"required": false
+			},
+			"description": "Ce champ indique la catégorie du patrimoine présent dans ce jeu. Pour un jeu de données de type Petit patrimoine, les valeurs possibles sont : Point d’eau, Petit patrimoine sacré, Ouvertures, Signalisation, Délimitation, Eclairage, Mesure du temps et de l’espace, Justice et libertés, Repos, Ornementation en fer, Patrimoine militaire et commémoratif, Arbre remarquable, Outil ancien, Art décoratif, Bien relatif à la faune, la flore ou aux minéraux, Transport, Atelier. Pour un jeu de type Patrimoine naturel, les valeurs possibles sont : Parc et jardin, Point d'eau (lac, étang, …), Terril, Réserve naturelle et site d'intérêt biologique, Bois et forêt, Cours d'eau, Cascade, Arbre remarquable, Formation géologique, Vignoble, Autre. Pour un jeu de type Patrimoine architectural, les valeurs possibles sont : Ferme et grange, Château, Fortification, Moulin, Lieu de culte (Eglise, chapelle, abbaye, collégiale, …), Fontaine et lavoir, Sculpture et statue, Beffroi et tour, Habitation, Hospice, Commerce et Horeca, Bâtiment industriel, Four, meule, pressoir, Cimetière, Monument commémoratif, Ecole, Bâtiment public, Château d'eau, Ouvrage d'art (pont, tunnel, écluse, …), Gare, Site archéologique, Autre. Pour un jeu de type Patrimoine artistiques, les valeurs possibles sont : Peinture, dessin, …, Outil, Sculpture, Objet d'art, Mobilier, Manuscrit, livre, …, Photographie, Gravure, Tapisserie, Autre",
+			"example": "Délimitation"
+		},
+		{
+			"name": "name",
+			"title": "Nom",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le nom du patrimoine",
+			"example": "Borne en calcaire"
+		},
+		{
+			"name": "description",
+			"title": "Description",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient la description du patrimoine",
+			"example": "Inscrite dans un mur de soutènement, borne en calcaire des 1er tiers et 2e tiers du 19e siècle. Inscriptions illisibles."
+		},
+		{
+			"name": "picture",
+			"title": "Photo",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient une URL renvoyant à une photo du patrimoine",
+			"example": "http://docum1.wallonie.be/PHOTOS/IPIC/resizes/Namur/92094/92094-INV-1177-01/92094-INV-1177-01-PHOT-01-01.jpg"
+		},
+		{
+			"name": "municipality",
+			"title": "Nom de la commune",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le nom de la commune dans laquelle se situe le patrimoine. Le nom de la commune provient de la base de données BeST Address : https://opendata.bosa.be/index.fr.html ou de la liste des codes INS : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "Namur"
+		},
+		{
+			"name": "ins_code",
+			"title": "Code INS",
+			"type": "number",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le code INS de la commune où se situe le patrimoine. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": 92094
+		},
+		{
+			"name": "zone_address",
+			"title": "Partie de commune",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient le nom de la partie de commune où se situe le patrimoine, conforme à l'appellation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "WEPION"
+		},
+		{
+			"name": "ins_zone_address",
+			"title": "Code INS de la partie de commune",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient le code INS de la partie de commune où se situe le patrimoine. La découpe géographique de StatBel Level 5 (NIS6) liste ces codes : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "92094C"
+		},
+		{
+			"name": "street_name",
+			"title": "Nom de rue",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ renseigne le nom de la voirie où se situe le patrimoine (ou de la voirie la plus proche s'il n'est pas en voirie).",
+			"example": "Chaussée de Louvain"
+		},
+		{
+			"name": "street_number",
+			"title": "Code rue BeSTAddress",
+			"type": "number",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le code de la voirie où se situe le patrimoine dans la base de données BeSTAdress (ou de la voirie la plus proche s'il n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
+			"example": 7753128
+		},
+		{
+			"name": "street_number_rrn",
+			"title": "Code rue national",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Code de la voirie où se situe le patrimoine dans le registre national (ou de la voirie la plus proche s'il n'est pas en voirie)",
+			"example": 8701
+		},
+		{
+			"name": "house_number",
+			"title": "Numéro de police le plus proche",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche du patrimoine",
+			"example": "70"
+		},
+		{
+			"name": "house_number",
+			"title": "Numéro de police le plus proche",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche du patrimoine",
+			"example": "70"
+		},
+		{
+			"name": "distance",
+			"title": "Distance au point d'adresse",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la distance, en mètres, entre le patrimoine et le point d'adresse le plus proche introduit via les autres champs (code_rue_bestadress, num_police, …). En cas de décimale, le séparateur est le point.",
+			"example": 11.56618325
+		},
+		{
+			"name": "coordinates",
+			"title": "Coordonnées",
+			"type": "geojson",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ indique les coordonnées du patrimoine. Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+			"example": {
+				"latitude": 50.4712861231,
+				"longitude": 4.8248565701
+			}
+		},
+		{
+			"name": "geometry",
+			"title": "Geométrie",
+			"type": "geojson",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la zone géographique du patrimoine grâce à une liste de coordonnées. Cette liste est générée à partir d'un fichier GPX. Ce champ est à compléter dans le cas d'un patrimoine s'étendant sur une large zone tel qu'un parc, un jardin, …",
+			"example": {
+				"type": "Feature",
+				"geometry": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							4.847505306238095,
+							50.46667043338194
+						],
+						[
+							4.847768672369818,
+							50.46736251132189
+						],
+						[
+							4.848142754673052,
+							50.46827619585064
+						],
+						[
+							4.848490503315489,
+							50.469091991978647
+						],
+						[
+							4.848549695662725,
+							50.46923379658611
+						]
+					]
+				},
+				"properties": {
+					"name": "un nom"
+				}
+			}
+		},
+		{
+			"name": "contact",
+			"title": "Contact",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient les informations de contact. Nous recommandons d'indiquer uniquement le site web du patrimoine afin de faciliter la maintenance et la mise à jour des données",
+			"example": "https://lampspw.wallonie.be/dgo4/petit-patrimoine-recensement/"
+		},
+		{
+			"name": "disabled_access",
+			"title": "Accessibilité PMR",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si le patrimoine est accessible aux personnes à mobilité réduite. Utilisez la valeur 'true' si l'emplacement est accessible, 'false' sinon. Ne pas renseigner ce champ s'il est non applicable ou non connu.",
+			"example": "Oui"
+		},
+		{
+			"name": "access_description",
+			"title": "Description de l'accessibilité",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise toute information jugée utile relative à l'accessibilité, par exemple : voiture, PMR. Indiquez ici que la borne est située le long d'une route carrossable."
+		},
+		{
+			"name": "public",
+			"title": "Public",
+			"type": "string",
+			"constraints": {
+				"enum": [
+					"Public",
+					"Privé"
+				],
+				"required": false
+			},
+			"description": "Ce champ précise si le patrimoine appartient à une autorité publique ou à un privé. Les valeurs possibles sont : Public, Privé. Ne pas renseigner ce champ s'il est non applicable ou non connu.",
+			"example": "Public"
+		},
+		{
+			"name": "listed",
+			"title": "Classé",
+			"type": "boolean",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ est recommandé. Il précise si le patrimoine est classé. Utilisez la valeur 'true' s'il est classé, 'false' sinon. Ne pas renseigner ce champ s'il est non applicable ou non connu.",
+			"example": "Oui"
+		},
+		{
+			"name": "listed_by",
+			"title": "Classé par",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Si le patrimoine est classé, ce champ contient le nom de l'organisme responsable de la reconnaissance, par exemple, 'UNESCO'."
+		},
+		{
+			"name": "created_date",
+			"title": "Date de création de la donnée",
+			"type": "date",
+			"format": "default",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+			"example": "2020-08-01"
+		},
+		{
+			"name": "last_modified_date",
+			"title": "Date de dernière modification de la donnée",
+			"type": "date",
+			"format": "default",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+			"example": "2021-11-05"
+		}
+	],
+	"primaryKey": "id"
+}
