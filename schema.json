@@ -294,7 +294,7 @@
 		{
 			"name": "street_number",
 			"title": "Code rue BeSTAddress",
-			"type": "number",
+			"type": "string",
 			"constraints": {
 				"required": true
 			},
@@ -304,7 +304,7 @@
 		{
 			"name": "street_number_rrn",
 			"title": "Code rue national",
-			"type": "number",
+			"type": "string",
 			"constraints": {
 				"required": false
 			},
