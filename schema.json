@@ -254,10 +254,10 @@
 			"name": "ins_code",
 			"title": "Code INS",
 			"type": "string",
-	                "constraints": {
-	                     "required": true,
-	                     "pattern":"^\\d{5}$"
-	                },
+			"constraints": {
+				"required": true,
+				"pattern": "^\\d{5}$"
+			},
 			"description": "Ce champ contient le code INS de la commune où se situe le patrimoine. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
 			"example": 92094
 		},
@@ -340,8 +340,17 @@
 			},
 			"description": "Ce champ indique les coordonnées du patrimoine. Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
 			"example": {
-				"latitude": 50.4712861231,
-				"longitude": 4.8248565701
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						4.8248565701,
+						50.4712861231
+					]
+				},
+				"properties": {
+					"name": "un nom"
+				}
 			}
 		},
 		{
@@ -402,7 +411,7 @@
 				"required": false
 			},
 			"description": "Ce champ précise si le patrimoine est accessible aux personnes à mobilité réduite. Utilisez la valeur 'true' si l'emplacement est accessible, 'false' sinon. Ne pas renseigner ce champ s'il est non applicable ou non connu.",
-			"example": "Oui"
+			"example": "true"
 		},
 		{
 			"name": "access_description",
@@ -411,7 +420,9 @@
 			"constraints": {
 				"required": false
 			},
-			"description": "Ce champ précise toute information jugée utile relative à l'accessibilité, par exemple : voiture, PMR. Indiquez ici que la borne est située le long d'une route carrossable."
+			"description": "Ce champ précise toute information jugée utile relative à l'accessibilité, par exemple : voiture, PMR. ",
+			"example" : "La borne est située le long d'une route carrossable."
+			
 		},
 		{
 			"name": "public",
@@ -435,7 +446,7 @@
 				"required": true
 			},
 			"description": "Ce champ est recommandé. Il précise si le patrimoine est classé. Utilisez la valeur 'true' s'il est classé, 'false' sinon. Ne pas renseigner ce champ s'il est non applicable ou non connu.",
-			"example": "Oui"
+			"example": "true"
 		},
 		{
 			"name": "listed_by",
@@ -444,13 +455,13 @@
 			"constraints": {
 				"required": false
 			},
-			"description": "Si le patrimoine est classé, ce champ contient le nom de l'organisme responsable de la reconnaissance, par exemple, 'UNESCO'."
+			"description": "Si le patrimoine est classé, ce champ contient le nom de l'organisme responsable de la reconnaissance, par exemple, 'UNESCO'.",
+			"example": "UNESCO" 
 		},
 		{
 			"name": "created_date",
 			"title": "Date de création de la donnée",
 			"type": "date",
-			"format": "default",
 			"constraints": {
 				"required": false
 			},
@@ -461,7 +472,6 @@
 			"name": "last_modified_date",
 			"title": "Date de dernière modification de la donnée",
 			"type": "date",
-			"format": "default",
 			"constraints": {
 				"required": false
 			},
