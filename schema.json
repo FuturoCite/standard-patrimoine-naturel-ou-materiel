@@ -253,7 +253,7 @@
 		{
 			"name": "ins_code",
 			"title": "Code INS",
-			"type": "string",
+			"type": "number",
 			"constraints": {
 				"required": true,
 				"pattern": "^\\d{5}$"
@@ -299,7 +299,7 @@
 				"required": true
 			},
 			"description": "Ce champ contient le code de la voirie où se situe le patrimoine dans la base de données BeSTAdress (ou de la voirie la plus proche s'il n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
-			"example": 7753128
+			"example": "7753128"
 		},
 		{
 			"name": "street_number_rrn",
@@ -309,7 +309,7 @@
 				"required": false
 			},
 			"description": "Code de la voirie où se situe le patrimoine dans le registre national (ou de la voirie la plus proche s'il n'est pas en voirie)",
-			"example": 8701
+			"example": "8701"
 		},
 		{
 			"name": "house_number",
