@@ -176,11 +176,11 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 
 * YYYY-MM-DD : Date de création du fichier
 * idProducteur : code INS unique de la commune pour identifier le producteur
-* emplacements-pmr : nom du fichier, en minuscules non accentuées
+* patrimoine-naturel-ou-materiel : nom du fichier, en minuscules non accentuées
 * territoire : Nom du territoire concerné, non accentué (exemple : Liege)
 * extension : Si les règles de formatage sont respectées, l'extension est .csv
 
-Exemple : 2022-10-25_62063_emplacements-pmr_Liege.csv
+Exemple : 2022-10-25_62063_patrimoine-naturel-ou-materiel_Liege.csv
 
 ### Recommandations pour la mise en conformité 
 
