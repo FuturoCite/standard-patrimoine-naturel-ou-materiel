@@ -9,7 +9,7 @@ On entend par Patrimoine naturel ou matériel, les types suivants de patrimoine:
 
 Un jeu de données basé sur ce standard devra contenir un seul type de patrimoine.
 
-Pour chacun de ces types de patrimoines, une liste de catégories de pattrimoines a été défini. Vous retrouvez cette liste dans la description du champ "Cat&eacute;gorie du patrimoine (category)" dans la section "Description du schéma" ci-dessous.
+Pour chacun de ces types de patrimoines, une liste de catégories de pattrimoines a été défini. Vous retrouvez cette liste dans la description du champ "Cat&eacute;gorie du patrimoine (category)" dans la section "Description du schéma" ci-dessous. Le fichier excel Types-Catégories reprend également cette classification https://github.com/FuturoCite/standard-patrimoine-naturel-ou-materiel/blob/main/Types-Categories.xlsx
 
 ## Contexte
 
