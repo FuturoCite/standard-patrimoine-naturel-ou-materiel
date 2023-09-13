@@ -1,6 +1,16 @@
 # standard-patrimoine-naturel-ou-materiel
 Ce schéma permet de modéliser les différents attributs des éléments constituant notre patrimoine naturel ou matériel.
 
+On entend par Patrimoine naturel ou matériel, les types suivants de patrimoine: 
+ - Petit patrimoine
+ - Patrimoine naturel
+ - Patrimoine architectural
+ - Patrimoine artistique
+
+Un jeu de données basé sur ce standard devra contenir un seul type de patrimoine.
+
+Pour chacun de ces types de patrimoines, une liste de catégories de pattrimoines a été défini. Vous retrouvez cette liste dans la description du champ "Cat&eacute;gorie du patrimoine (category)" dans la section "Description du schéma" ci-dessous.
+
 ## Contexte
 
 Il existe un besoin d'harmonisation de la publication en open data de données essentielles produites par les administrations publiques wallonnes. En juin 2023, près de 700 jeux de données sont publiés sur le portail [Open Data Wallonie Bruxelles (ODWB)](https://www.odwb.be/explore/?sort=modified), qui sont très hétérogènes. 
